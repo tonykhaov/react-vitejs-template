@@ -4,7 +4,7 @@ import { QueryCache } from 'react-query'
 
 const queryCache = new QueryCache()
 
-beforeAll(() => server.listen({ onUnhandledRequest: 'error' }))
+beforeAll(() => server.listen())
 beforeEach(() => queryCache.clear())
 afterEach(() => server.resetHandlers())
 afterAll(() => server.close())

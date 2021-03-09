@@ -1,7 +1,14 @@
 import { rest } from 'msw'
+import { buildPost } from './generate'
 
 export const handlers = [
-  rest.get('/login', (req, res, ctx) => {
-    return res(ctx.json({ data: true }))
+  rest.get('/posts', (req, res, ctx) => {
+    return res(
+      ctx.json(
+        Array(5)
+          .fill(null)
+          .map(() => buildPost()),
+      ),
+    )
   }),
 ]

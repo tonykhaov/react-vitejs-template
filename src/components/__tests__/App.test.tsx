@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen } from '@src/utils/test/app-test-utils'
 import App from '@src/components/App'
 
 test('renders App with react lab text', () => {
