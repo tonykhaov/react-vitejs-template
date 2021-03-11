@@ -10,6 +10,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "dayjs": "^1.10.4",
     "framer-motion": "^3.10.0",
     "graphql-request": "^3.4.0",
     "react": "^17.0.1",
