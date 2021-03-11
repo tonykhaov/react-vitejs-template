@@ -1,11 +1,7 @@
 import * as React from 'react'
 import { useQuery } from 'react-query'
+import type { Post } from '@src/types/post'
 
-type Post = {
-  id: string
-  title: string
-  content: string
-}
 const Query = () => {
   const query = useQuery<Post[]>('posts', () => fetch('/posts').then((res) => res.json()))
   if (query.isLoading) return <p>Loading...</p>
