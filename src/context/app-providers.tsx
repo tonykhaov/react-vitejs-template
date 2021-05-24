@@ -3,7 +3,10 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 
 const client = new QueryClient()
 
-// TODO find the best type to make rtlRender work
-export default function AppProviders({ children }: any) {
+type AppProvidersProps = {
+  children: React.ReactElement
+}
+
+export default function AppProviders({ children }: AppProvidersProps) {
   return <QueryClientProvider client={client}>{children}</QueryClientProvider>
 }
