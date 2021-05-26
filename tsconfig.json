@@ -13,6 +13,7 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "importsNotUsedAsValues": "error",
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
