@@ -1,12 +1,13 @@
 import * as React from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 
-const client = new QueryClient()
+const queryClient = new QueryClient()
 
-type AppProvidersProps = {
-  children: React.ReactElement
+const AppProviders: React.FC = ({ children }) => {
+  return (
+    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+  )
 }
 
-export default function AppProviders({ children }: AppProvidersProps) {
-  return <QueryClientProvider client={client}>{children}</QueryClientProvider>
-}
+export { queryClient }
+export default AppProviders
