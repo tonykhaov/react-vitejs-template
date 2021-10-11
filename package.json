@@ -12,6 +12,7 @@
   "dependencies": {
     "@hookform/resolvers": "^2.8.2",
     "@react-three/fiber": "^7.0.10",
+    "dayjs": "^1.10.7",
     "framer-motion": "^4.1.17",
     "graphql-request": "^3.5.0",
     "react": "^17.0.2",
