@@ -5,9 +5,9 @@ import AppProviders from './context/app-providers'
 import App from './App'
 import { worker } from './mocks/browser'
 
-// if (process.env.NODE_ENV === 'development') {
-//   worker.start()
-// }
+if (process.env.NODE_ENV === 'development') {
+  worker.start()
+}
 
 ReactDOM.render(
   <React.StrictMode>
