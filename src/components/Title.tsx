@@ -1,5 +1,5 @@
-function Title(props: React.PropsWithChildren<{}>) {
-  return <h1 {...props} />
+function Title(props: React.PropsWithChildren<React.ReactNode>) {
+  return <h1 {...props}>{props.children}</h1>
 }
 
 export default Title

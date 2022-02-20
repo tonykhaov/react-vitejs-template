@@ -24,6 +24,6 @@
       "@components/*": ["./src/components/*"]
     }
   },
-  "include": ["src"],
+  "include": ["./src", "./public/mockServiceWorker.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
