@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
+    "types": ["vitest/globals", "@testing-library/jest-dom"],
     "target": "ESNext",
+    "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["vite/client", "jest"],
     "allowJs": false,
     "skipLibCheck": false,
     "esModuleInterop": false,
@@ -13,14 +14,16 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "importsNotUsedAsValues": "remove",
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
       "@src/*": ["./src/*"],
-      "@model/*": ["./model/*"]
+      "@utils/*": ["./src/utils/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@components/*": ["./src/components/*"]
     }
   },
-  "include": ["./src"]
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

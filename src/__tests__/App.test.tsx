@@ -1,7 +1,7 @@
+import { render, screen } from '@utils/test/app-test-utils'
 import App from '@src/App'
-import { render, screen } from '@src/utils/test/app-test-utils'
 
-test('App.tsx', () => {
+test('should render App with Homepage first', () => {
   render(<App />)
-  expect(screen.getByText('REACT LAB')).toBeInTheDocument()
+  expect(screen.getByRole('heading', { name: /Homepage/i })).toBeInTheDocument()
 })
