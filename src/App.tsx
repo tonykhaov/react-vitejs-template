@@ -6,11 +6,11 @@ function App() {
   return (
     <>
       <nav>
-        <ul className="flex gap-8 justify-center">
-          <li className="p-8 border border-black">
+        <ul className="flex justify-center gap-8">
+          <li className="border border-black p-8">
             <Link to="/">Go to homepage</Link>
           </li>
-          <li className="p-8 border border-black">
+          <li className="border border-black p-8">
             <Link to="/about">Go to about</Link>
           </li>
         </ul>
