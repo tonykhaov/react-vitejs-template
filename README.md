@@ -16,4 +16,3 @@ To have the best dev experience possible, I picked these technologies (they may 
 - Add storybook
 - Add vite-plugin-ssr
 - Setup CI with github actions
-- Wait for eslint-plugin-react to fix jsx-key warning https://github.com/yannickcr/eslint-plugin-react/issues/3215
