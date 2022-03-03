@@ -10,10 +10,10 @@ To have the best dev experience possible, I picked these technologies (they may 
 - [Eslint](https://eslint.org/) + [Prettier](https://prettier.io/) (my linting and styling rules)
 - [Cypress](https://cypress.io/) (E2E testing)
 - Commits: [Angular Commit Message Conventions](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)
+- Storybook (UI component explorer)
 
 # TODO:
 
 - Add husky + git-cz + commitizen + lint-staged
-- Add storybook
 - Add vite-plugin-ssr
 - Setup CI with github actions
