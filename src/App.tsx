@@ -1,17 +1,33 @@
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import Homepage from '@pages/homepage'
 import About from '@pages/about'
+import clsx from 'clsx'
 
 function App() {
+  const { pathname } = useLocation()
   return (
     <>
       <nav>
         <ul className="flex justify-center gap-8">
-          <li className="border border-black p-8">
-            <Link to="/">Go to homepage</Link>
+          <li>
+            <Link
+              to="/"
+              className={clsx('hover:text-blue-500', {
+                'border-b-4 border-blue-400 text-blue-700': pathname === '/',
+              })}
+            >
+              Go to homepage
+            </Link>
           </li>
-          <li className="border border-black p-8">
-            <Link to="/about">Go to about</Link>
+          <li>
+            <Link
+              to="/about"
+              className={clsx('hover:text-blue-500', {
+                'border-b-4 border-blue-400 text-blue-700': pathname === '/about',
+              })}
+            >
+              Go to about
+            </Link>
           </li>
         </ul>
       </nav>
