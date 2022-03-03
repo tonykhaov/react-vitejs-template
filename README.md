@@ -1,6 +1,6 @@
 # My Lightning Fast React.js Template
 
-This is my opinionated React.js template. I usually use it as a lab for trying js code, React.js code, libs, etc. But this is also a template to help me (and you!) set up a new projects properly.
+This is my opinionated React.js template. I usually use it as a lab for trying js code, React.js code, libs, etc. But this is also a template to help me (and probably you!) bootstrap new projects.
 To have the best dev experience possible, I picked these technologies (they may change overtime, you know how fast the js ecosystem evolves LOL.):
 
 - React.js & TypeScript
@@ -11,7 +11,7 @@ To have the best dev experience possible, I picked these technologies (they may 
 
 # TODO:
 
-- Add husky + git-cz + commitizen
+- Add husky + git-cz + commitizen + lint-staged
 - Add storybook
 - Add vite-plugin-ssr
 - Setup CI with github actions
