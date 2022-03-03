@@ -17,3 +17,8 @@ To have the best dev experience possible, I picked these technologies (they may 
 - Add husky + git-cz + commitizen + lint-staged
 - Add vite-plugin-ssr
 - Setup CI with github actions
+
+WIP:
+
+- add absolute path
+- running storybook server works but loading stories does not work..
