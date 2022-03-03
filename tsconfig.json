@@ -24,6 +24,7 @@
       "@components/*": ["./src/components/*"]
     }
   },
-  "include": ["./src", "./public/mockServiceWorker.js"],
+  "exclude": ["./cypress"],
+  "include": [".", "./public/mockServiceWorker.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

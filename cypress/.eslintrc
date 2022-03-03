@@ -1,0 +1,6 @@
+{
+  "parserOptions": {
+    "tsconfigRootDir": "./cypress",
+    "project": "./tsconfig.json"
+  }
+}

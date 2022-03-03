@@ -12,7 +12,8 @@ To have the best dev experience possible, I picked these technologies (they may 
 # TODO:
 
 - Add husky + git-cz + commitizen
-- Add cypress
 - Add storybook
 - Add vite-plugin-ssr
 - Setup CI with github actions
+
+- UPDATE CYPRESS CONFIG TO CHANGE URL BASED ON ENV VAR OR SOMETHING
