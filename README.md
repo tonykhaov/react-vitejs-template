@@ -15,5 +15,3 @@ To have the best dev experience possible, I picked these technologies (they may 
 - Add storybook
 - Add vite-plugin-ssr
 - Setup CI with github actions
-
-- UPDATE CYPRESS CONFIG TO CHANGE URL BASED ON ENV VAR OR SOMETHING

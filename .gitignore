@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Cypress
+/cypress/videos
+/cypress/screenshots
+
+# Env
+.env
+.env.production
+.envrc
