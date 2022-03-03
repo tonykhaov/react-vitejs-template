@@ -4,17 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "dev": "vite dev",
     "test": "vitest run",
     "test:watch": "vitest watch",
-    "cy:run": "cypress run",
     "cy:open": "cypress open",
+    "test:e2e:dev": "start-server-and-test 'yarn dev' 'http-get://localhost:3000' 'yarn cy:open'",
+    "cy:run": "cypress run",
+    "ci": "start-server-and-test 'yarn dev' 'http-get://localhost:3000' 'yarn cy:run'",
     "coverage": "vitest run --coverage",
     "typecheck": "tsc -b",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext js,jsx,ts,tsx .",
-    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|gql|graphql|mdx|vue)\"",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|gql|graphql|mdx|vue)\""
   },
   "dependencies": {
     "clsx": "^1.1.1",
@@ -52,6 +54,7 @@
     "postcss": "^8.4.7",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.8",
+    "start-server-and-test": "^1.14.0",
     "typescript": "^4.6.2",
     "vite": "^2.8.6",
     "vite-tsconfig-paths": "^3.4.1",
