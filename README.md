@@ -12,7 +12,6 @@ To have the best dev experience possible, I picked these technologies (they may 
 
 # TODO:
 
-- Add husky + git-cz + commitizen + lint-staged
 - Add storybook
 - Add vite-plugin-ssr
 - Setup CI with github actions
