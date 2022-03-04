@@ -9,6 +9,7 @@ To have the best dev experience possible, I picked these technologies (they may 
 - Vitest + react-testing-library (unit & integration testing)
 - Eslint + Prettier (my linting and styling rules)
 - Cypress (E2E testing)
+- Commits: [Angular Commit Message Conventions](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)
 
 # TODO:
 
