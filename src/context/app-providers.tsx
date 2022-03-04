@@ -1,10 +1,11 @@
+import * as React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 
-const queryClient = new QueryClient()
-
 function AppProviders({ children }: React.PropsWithChildren<React.ReactNode>) {
+  const [queryClient] = React.useState(() => new QueryClient())
+
   return (
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
@@ -15,5 +16,4 @@ function AppProviders({ children }: React.PropsWithChildren<React.ReactNode>) {
   )
 }
 
-export { queryClient }
 export default AppProviders
