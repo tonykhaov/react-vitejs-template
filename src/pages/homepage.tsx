@@ -1,5 +1,7 @@
+import Title from '@src/components/Title'
+
 function Homepage() {
-  return <h1>Homepage</h1>
+  return <Title>Homepage</Title>
 }
 
 export default Homepage
