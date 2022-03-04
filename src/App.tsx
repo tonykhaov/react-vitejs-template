@@ -20,13 +20,13 @@ function App() {
 function NavBar() {
   const { pathname } = useLocation()
   return (
-    <nav>
+    <nav className="border-2 py-4">
       <ul className="flex justify-center gap-8">
         <li>
           <Link
             to="/"
-            className={clsx('hover:text-blue-500', {
-              'border-b-4 border-blue-400 text-blue-700': pathname === '/',
+            className={clsx('p-2 hover:text-blue-500', {
+              'border-4 border-blue-400 text-blue-700': pathname === '/',
             })}
           >
             Go to homepage
@@ -35,8 +35,8 @@ function NavBar() {
         <li>
           <Link
             to="/about"
-            className={clsx('hover:text-blue-500', {
-              'border-b-4 border-blue-400 text-blue-700': pathname === '/about',
+            className={clsx('p-2 hover:text-blue-500', {
+              'border-4 border-blue-400 text-blue-700': pathname === '/about',
             })}
           >
             Go to about
