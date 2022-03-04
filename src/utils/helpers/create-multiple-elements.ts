@@ -1,4 +1,4 @@
-function createMultipleElements(length: number, transformer: () => void) {
+function createMultipleElements<ElementType>(length: number, transformer: () => ElementType) {
   return Array.from({ length }, (_, i) => i).map(transformer)
 }
 
