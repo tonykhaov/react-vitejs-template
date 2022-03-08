@@ -3,13 +3,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import Unocss from 'unocss/vite'
+import presetWind from '@unocss/preset-wind'
+
 import 'dotenv/config'
 
 const isDev = process.env.CI
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [react(), Unocss({ presets: [presetWind()] }), tsconfigPaths()],
   server: {
     port: Number(process.env.PORT) ?? (isDev ? 1234 : 3000),
   },
