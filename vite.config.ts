@@ -14,7 +14,7 @@ const isDev = process.env.CI
 export default defineConfig({
   plugins: [react(), Unocss({ presets: [presetWind()] }), tsconfigPaths()],
   server: {
-    port: Number(process.env.PORT) ?? (isDev ? 1234 : 3000),
+    port: 3000,
   },
   // vitest config
   test: {
