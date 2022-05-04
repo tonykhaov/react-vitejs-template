@@ -3,6 +3,7 @@ import Fetch from '@pages/fetch'
 import { server, rest } from '@src/utils/mocks/server'
 import { generateUser } from '@src/utils/mocks/generate/user'
 import type { User } from '@src/types/user'
+import { sleep } from '@src/utils/helpers/sleep'
 
 describe('should render Fetch page', () => {
   it('should display loading message and then list of users', async () => {
@@ -16,19 +17,26 @@ describe('should render Fetch page', () => {
       })
     )
 
+    // when calling the request handler url the fetch is not intercepted.
+    fetch('https://my-backend.com/api/users')
+      .then((res) => res.json())
+      .then((data) => console.log(" I didn't get response from the endpoint . . .", data))
+
     // but fetch calls made to endpoints other than endpoints mocked by msw work (uncomment to see)
     // fetch('https://jsonplaceholder.typicode.com/todos/1')
     //   .then((res) => res.json())
     //   .then((data) => console.log('I got this data', data))
 
-    render(<Fetch />)
+    // Normally the fetch call is made in the React component but to help you I'll just comment this line and use a fetch in the test.
+    // render(<Fetch />)
 
-    expect(screen.getByText(/fetch/i)).toBeInTheDocument()
-    await waitFor(() => expect(screen.queryByText(/loading/i)).not.toBeInTheDocument())
+    // expect(screen.getByText(/fetch/i)).toBeInTheDocument()
+    // await waitFor(() => expect(screen.queryByText(/loading/i)).not.toBeInTheDocument())
 
-    const [firstUser] = randomUsers
-    expect(screen.getByText(firstUser.name)).toBeInTheDocument()
-    expect(screen.getByText(firstUser.email)).toBeInTheDocument()
-    expect(screen.getByText(firstUser.password)).toBeInTheDocument()
+    // const [firstUser] = randomUsers
+    // expect(screen.getByText(firstUser.name)).toBeInTheDocument()
+    // expect(screen.getByText(firstUser.email)).toBeInTheDocument()
+    // expect(screen.getByText(firstUser.password)).toBeInTheDocument()
+    await sleep(2000)
   })
 })
