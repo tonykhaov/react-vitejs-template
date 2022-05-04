@@ -2,6 +2,7 @@ import '@testing-library/jest-dom'
 
 // use node v18 to reproduce the bug
 if (!process.version.includes('v18')) {
+  console.log("you're not using node v18")
   const whatwgFetchPath = 'whatwg-fetch'
   import(whatwgFetchPath)
 }
