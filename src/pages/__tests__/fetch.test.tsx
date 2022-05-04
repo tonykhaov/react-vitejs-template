@@ -18,9 +18,10 @@ describe('should render Fetch page', () => {
     )
 
     // when calling the request handler url the fetch is not intercepted.
-    fetch('https://my-backend.com/api/users')
-      .then((res) => res.json())
-      .then((data) => console.log(" I didn't get response from the endpoint . . .", data))
+    const data = await fetch('https://my-backend.com/api/users').then((res) => res.json())
+
+    // the data received should be equal to the data sent by the server
+    await waitFor(() => expect(data).toEqual(randomUsers))
 
     // but fetch calls made to endpoints other than endpoints mocked by msw work (uncomment to see)
     // fetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -37,6 +38,5 @@ describe('should render Fetch page', () => {
     // expect(screen.getByText(firstUser.name)).toBeInTheDocument()
     // expect(screen.getByText(firstUser.email)).toBeInTheDocument()
     // expect(screen.getByText(firstUser.password)).toBeInTheDocument()
-    await sleep(2000)
   })
 })
