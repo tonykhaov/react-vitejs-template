@@ -8,7 +8,7 @@ import { worker } from '@src/utils/mocks/browser'
 
 if (process.env.NODE_ENV === 'development') {
   // UNCOMMENT IF YOU WANT TO MOCK YOUR REQUESTS IN DEVELOPMENT MODE
-  // worker.start()
+  worker.start()
 }
 
 const container = document.getElementById('root') as HTMLElement
