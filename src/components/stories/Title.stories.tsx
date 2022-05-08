@@ -1,6 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import Title from '../components/Title'
+import Title from '../Title'
 
 export default {
   title: 'Title',
