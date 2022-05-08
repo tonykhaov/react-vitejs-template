@@ -1,4 +1,4 @@
-import { renderHook } from '@testing-library/react-hooks'
+import { renderHook, act } from '@utils/test/app-test-utils'
 import useCounter from '@src/hooks/useCounter'
 import { faker } from '@faker-js/faker'
 
@@ -10,10 +10,10 @@ describe('useCounter', () => {
     const { result } = renderHook(() => useCounter({ initialCount: randomCount, step: randomStep }))
     expect(result.current.count).toBe(randomCount)
 
-    result.current.increment()
+    act(() => result.current.increment())
     expect(result.current.count).toBe(randomCount + randomStep)
 
-    result.current.decrement()
+    act(() => result.current.decrement())
     expect(result.current.count).toBe(randomCount)
   })
 
@@ -24,10 +24,10 @@ describe('useCounter', () => {
     const { result } = renderHook(() => useCounter({ initialCount: randomCount, step: randomStep }))
     expect(result.current.count).toBe(randomCount)
 
-    result.current.decrement()
+    act(() => result.current.decrement())
     expect(result.current.count).toBe(randomCount - randomStep)
 
-    result.current.increment()
+    act(() => result.current.increment())
     expect(result.current.count).toBe(randomCount)
   })
 })
