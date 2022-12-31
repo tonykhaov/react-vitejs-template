@@ -4,11 +4,9 @@ import AppProviders from '@src/context/app-providers'
 import App from '@src/App'
 import 'uno.css'
 import '@unocss/reset/tailwind.css'
-import { worker } from '@src/utils/mocks/browser'
 
 if (process.env.NODE_ENV === 'development') {
-  // UNCOMMENT IF YOU WANT TO MOCK YOUR REQUESTS IN DEVELOPMENT MODE
-  worker.start()
+  import('@src/utils/mocks/browser').then(({ worker }) => worker.start())
 }
 
 const container = document.getElementById('root') as HTMLElement
